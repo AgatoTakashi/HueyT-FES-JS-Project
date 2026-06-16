@@ -16,7 +16,7 @@ async function renderSearch(userValue) {
     try {
         searchResultsEl.innerHTML = `<i class="loading fas fa-spinner"></i>`;
 
-        const apiString = `http://www.omdbapi.com/?apikey=${apikey}&s=${userValue}`;
+        const apiString = `https://www.omdbapi.com/?apikey=${apikey}&s=${userValue}`;
         const results = await fetch(`${apiString}`);
         const resultsArr = await results.json();
 
