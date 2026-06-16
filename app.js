@@ -14,6 +14,8 @@ async function submitInput() {
 
 async function renderSearch(userValue) {
     try {
+        searchResultsEl.innerHTML = `<i class="loading fas fa-spinner"></i>`;
+
         const apiString = `http://www.omdbapi.com/?apikey=${apikey}&s=${userValue}`;
         const results = await fetch(`${apiString}`);
         const resultsArr = await results.json();
@@ -38,7 +40,7 @@ async function renderSearch(userValue) {
             searchResultsEl.innerHTML = resultsArr.Search.slice(0,6).map(movie => postHTML(movie));
         }
     } catch (err) {
-        alert('Movie not found! Please try a different keyword(s)');
+        searchResultsEl.innerHTML = `<p class="error">Movie not found!</p>`;
     }
 }
 
