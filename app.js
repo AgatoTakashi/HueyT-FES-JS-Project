@@ -20,26 +20,25 @@ async function renderSearch(userValue) {
 
         if (sortMethod === 'A_TO_Z') {
             const filteredArr = resultsArr.Search.sort((a, b) => a.Title.localeCompare(b.Title));
-            searchResultsEl.innerHTML = filteredArr.map(movie => postHTML(movie));
+            searchResultsEl.innerHTML = filteredArr.slice(0,6).map(movie => postHTML(movie));
         }
         else if (sortMethod === 'Z_TO_A') {
             const filteredArr = resultsArr.Search.sort((a, b) => b.Title.localeCompare(a.Title));
-            searchResultsEl.innerHTML = filteredArr.map(movie => postHTML(movie));
+            searchResultsEl.innerHTML = filteredArr.slice(0,6).map(movie => postHTML(movie));
         }
         else if (sortMethod === 'NEW_TO_OLD') {
             const filteredArr = resultsArr.Search.sort((a, b) => b.Year.slice(0,4) - a.Year.slice(0,4));
-            searchResultsEl.innerHTML = filteredArr.map(movie => postHTML(movie));
+            searchResultsEl.innerHTML = filteredArr.slice(0,6).map(movie => postHTML(movie));
         }
         else if (sortMethod === 'OLD_TO_NEW') {
             const filteredArr = resultsArr.Search.sort((a, b) => a.Year.slice(0,4) - b.Year.slice(0,4));
-            searchResultsEl.innerHTML = filteredArr.map(movie => postHTML(movie));
+            searchResultsEl.innerHTML = filteredArr.slice(0,6).map(movie => postHTML(movie));
         }
         else {
-            searchResultsEl.innerHTML = resultsArr.Search.map(movie => postHTML(movie));
+            searchResultsEl.innerHTML = resultsArr.Search.slice(0,6).map(movie => postHTML(movie));
         }
     } catch (err) {
-        alert('Movie not found!');
-        console.log(sortMethod);
+        alert('Movie not found! Please try a different keyword(s)');
     }
 }
 
