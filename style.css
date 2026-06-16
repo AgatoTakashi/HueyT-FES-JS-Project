@@ -4,6 +4,31 @@
     box-sizing: border-box;
 }
 
+header {
+    height: 15vh;
+    position: sticky;
+    top: 0;
+    background: transparent;
+    backdrop-filter: blur(5px);
+}
+
+main {
+    min-height: 85vh;
+    z-index: 1;
+    background: white;
+}
+
+footer {
+    background: black;
+    color: white;
+    font-size: 10em;
+    font-weight: 900;
+    position: sticky;
+    bottom: 0;
+    z-index: -1;
+    text-align: center;
+}
+
 .libre-barcode-128-regular {
   font-family: "Libre Barcode 128", system-ui;
   font-weight: 400;
@@ -43,12 +68,22 @@
 .content-wrap {
     width: 100%;
     text-align: center;
-    margin: 64px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    text-shadow:
+    1px 1px 0 white,
+    -1px 1px 0 white,
+    1px -1px 0 white,
+    -1px -1px 0 white;
 }
 
 .input-wrap {
+    width: 100%;
+    max-width: 800px;
     position: relative;
-    margin: 32px;
 }
 
 .input-wrap input {
@@ -61,10 +96,15 @@
     border-radius: 50px;
 }
 
+.input-wrap input:focus {
+    background: white;
+}
+
 .search-wrap {
     position: absolute;
-    top: 5%;
-    left: 75%;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
 }
 
 .search-wrap button {

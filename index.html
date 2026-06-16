@@ -11,21 +11,23 @@
     <script src="https://kit.fontawesome.com/3d16958d9f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section id="search-input">
+    <header>
         <div class="content-wrap">
-            <h1>Start your search</h1>
+            <h1>Find a movie</h1>
             <div class="input-wrap">
-                <input type="text" id="userInput" placeholder="Type in search">
+                <input type="text" id="userInput" placeholder="Type in a keyword">
                 <div class="search-wrap">
-                    <button onclick="submitInput()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <button onclick="submitInput()" id="submitButton"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </div>
         </div>
-    </section>
-    <section id="search-results">
+    </header>
+    <main>
         <div class="results-list"></div>
-    </section>
-
+    </main>
     <script src="app.js"></script>
+    <footer>
+        Hi, I'm a footer
+    </footer>
 </body>
 </html>

@@ -4,6 +4,10 @@ const searchResultsEl = document.querySelector('.results-list');
 async function submitInput() {
     const inputElement = document.getElementById("userInput");
     const userValue = inputElement.value.trim();
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
     return renderSearch(userValue);
 }
 
@@ -23,3 +27,11 @@ function postHTML(movie) {
             <p class="movie__id libre-barcode-128-regular">${movie.imdbID}</p>
         </div>`
 }
+
+const input = document.getElementById("userInput");
+
+input.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    submitInput();
+  }
+});
