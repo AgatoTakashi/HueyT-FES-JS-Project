@@ -39,3 +39,44 @@
 .movie__title, .movie__year {
     padding: 8px;
 }
+
+.content-wrap {
+    width: 100%;
+    text-align: center;
+    margin: 64px;
+}
+
+.input-wrap {
+    position: relative;
+    margin: 32px;
+}
+
+.input-wrap input {
+    color: rgba(0, 0, 0, .87);
+    width: 100%;
+    max-width: 800px;
+    height: 60px;
+    font-size: 20px;
+    padding-left: 40px;
+    border-radius: 50px;
+}
+
+.search-wrap {
+    position: absolute;
+    top: 5%;
+    left: 75%;
+}
+
+.search-wrap button {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: white;
+    border: none;
+}
+
+.search-wrap button svg {
+  width: 32px;
+  height: 32px;
+}

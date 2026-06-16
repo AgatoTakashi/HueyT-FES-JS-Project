@@ -8,16 +8,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3d16958d9f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    Enter search string:
-    <input type="text" id="userInput" placeholder="Type in search">
-    <button onclick="submitInput()">Start Search</button>
-    <section id="search-results">
-
-        <div class="results-list"></div>
+    <section id="search-input">
+        <div class="content-wrap">
+            <h1>Start your search</h1>
+            <div class="input-wrap">
+                <input type="text" id="userInput" placeholder="Type in search">
+                <div class="search-wrap">
+                    <button onclick="submitInput()"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+        </div>
     </section>
-
+    <section id="search-results">
+        <div class="results-list"></div>
     </section>
 
     <script src="app.js"></script>
