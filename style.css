@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.libre-barcode-128-regular {
+  font-family: "Libre Barcode 128", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+}
+
+.results-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    border: 2px solid gray;
+    border-radius: 8px;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.movie__poster--img {
+    display: inline-block;
+}
+
+.movie__year, .movie__title, .movie__id {
+    text-align: center;
+}
+
+.movie__title, .movie__year {
+    padding: 8px;
+}
