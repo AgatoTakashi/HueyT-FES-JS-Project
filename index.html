@@ -20,6 +20,13 @@
                     <button onclick="submitInput()" id="submitButton"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </div>
+            <select id="filter" onChange="sortMovies(event)">
+                <option value="" disabled selected>Sort</option>
+                <option value="A_TO_Z">Alphabetical A to Z</option>
+                <option value="Z_TO_A">Alphabetical Z to A</option>
+                <option value="NEW_TO_OLD">Newest to oldest</option>
+                <option value="OLD_TO_NEW">Oldest to newest</option>
+            </select>
         </div>
     </header>
     <main>
