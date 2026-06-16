@@ -11,9 +11,10 @@
 </head>
 <body>
     Enter search string:
-    <input type="text" onSubmit="resultsHTML()">
+    <input type="text" id="userInput" placeholder="Type in search">
+    <button onclick="submitInput()">Start Search</button>
     <section id="search-results">
-        Your Search Results:
+
         <div class="results-list"></div>
     </section>
 
